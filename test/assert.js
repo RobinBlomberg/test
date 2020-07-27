@@ -1,5 +1,5 @@
+const { ErrorMessages } = require('runtime')
 const { deepEqual, it, notDeepEqual } = require('../test')
-const ErrorMessages = require('../../runtime/errorMessages')
 
 it('should not throw an error if the values are deeply equal', () => {
   try {
