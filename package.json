@@ -2,6 +2,7 @@
   "name": "test",
   "version": "0.3.0",
   "dependencies": {
+    "error": "github:RobinBlomberg/error#release/0.3.0",
     "utility": "github:RobinBlomberg/utility#release/0.3.0"
   }
 }
