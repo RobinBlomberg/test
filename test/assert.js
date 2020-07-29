@@ -1,4 +1,4 @@
-const { ErrorMessages } = require('runtime')
+const ErrorMessages = require('error/messages')
 const { deepEqual, it, notDeepEqual } = require('../test')
 
 it('should not throw an error if the values are deeply equal', () => {

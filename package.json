@@ -2,7 +2,6 @@
   "name": "test",
   "version": "0.3.0",
   "dependencies": {
-    "runtime": "github:RobinBlomberg/runtime#release/0.3.0",
     "utility": "github:RobinBlomberg/utility#release/0.3.0"
   }
 }

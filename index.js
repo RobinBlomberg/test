@@ -1,7 +1,16 @@
-const assert = require('./assert')
-const test = require('./test')
+const { deepEqual, notDeepEqual } = require('./assert')
+
+const describe = (description, test) => {
+  return test()
+}
+
+const it = (description, test) => {
+  return test()
+}
 
 module.exports = {
-  assert,
-  test
+  deepEqual,
+  describe,
+  it,
+  notDeepEqual
 }

@@ -1,5 +1,5 @@
-const baseDeepEqual = require('utility').deepEqual
-const { ErrorMessages } = require('runtime')
+const baseDeepEqual = require('utility/deepEqual')
+const ErrorMessages = require('error/messages')
 
 const deepEqual = (a, b) => {
   if (!baseDeepEqual(a, b)) {
