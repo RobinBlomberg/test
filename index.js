@@ -1,4 +1,4 @@
-const { deepEqual, notDeepEqual } = require('./assert')
+const { deepEqual, fail, notDeepEqual, ok } = require('./assert')
 
 const describe = (description, test) => {
   return test()
@@ -11,6 +11,8 @@ const it = (description, test) => {
 module.exports = {
   deepEqual,
   describe,
+  fail,
   it,
-  notDeepEqual
+  notDeepEqual,
+  ok
 }
