@@ -1,7 +1,10 @@
 {
   "name": "@kjou/test",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "author": "Robin Blomberg",
+  "scripts": {
+    "test": "node ./test"
+  },
   "dependencies": {
     "@kjou/error": "github:RobinBlomberg/error#release/0.3.4",
     "@kjou/utility": "github:RobinBlomberg/utility#release/0.3.1"
