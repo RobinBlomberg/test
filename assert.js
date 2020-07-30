@@ -15,6 +15,12 @@ const doesNotThrow = (fn) => {
   }
 }
 
+const equal = (a, b, noun) => {
+  if (a !== b) {
+    throw new Error(ErrorMessages.ValueMismatch(a, b, noun))
+  }
+}
+
 const fail = (error) => {
   if (error instanceof Error) {
     throw error
@@ -25,7 +31,13 @@ const fail = (error) => {
 
 const notDeepEqual = (a, b) => {
   if (baseDeepEqual(a, b)) {
-    throw new Error(ErrorMessages.UnexpectedDeepEquality(a, b))
+    throw new Error(ErrorMessages.UnexpectedDeepEquality(a))
+  }
+}
+
+const notEqual = (a, b, noun) => {
+  if (a === b) {
+    throw new Error(ErrorMessages.UnexpectedMatch(a, noun))
   }
 }
 
@@ -60,8 +72,10 @@ const throws = (fn, name, message) => {
 module.exports = {
   deepEqual,
   doesNotThrow,
+  equal,
   fail,
   notDeepEqual,
+  notEqual,
   ok,
   throws
 }
