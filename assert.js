@@ -1,5 +1,5 @@
-const ErrorMessages = require('error').Messages
-const baseDeepEqual = require('utility').deepEqual
+const ErrorMessages = require('@kjou/error').Messages
+const baseDeepEqual = require('@kjou/utility').deepEqual
 
 const deepEqual = (a, b) => {
   if (!baseDeepEqual(a, b)) {

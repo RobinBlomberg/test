@@ -1,4 +1,4 @@
-const ErrorMessages = require('error').Messages
+const ErrorMessages = require('@kjou/error').Messages
 const { deepEqual, it, notDeepEqual } = require('../test')
 
 it('should not throw an error if the values are deeply equal', () => {
