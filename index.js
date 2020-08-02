@@ -7,7 +7,7 @@ const {
   notEqual,
   ok,
   throws
-} = require('./assert')
+} = require('@kjou/assert')
 
 const describe = (description, test) => {
   return test()
