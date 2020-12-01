@@ -1,3 +1,5 @@
+export * from '@robinblomberg/assert';
+
 export function describe<T extends void | Promise<void>>(
   description: string,
   test: () => T
