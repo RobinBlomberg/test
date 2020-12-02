@@ -1,5 +1,3 @@
-/* eslint-disable no-console */
-
 import * as Ansi from '@robinblomberg/ansi';
 import { Timer } from '@robinblomberg/timer';
 
@@ -14,6 +12,7 @@ const _logSuccess = (name, timer) => {
   const elapsed = timer.elapsed();
   const elapsedString = Ansi.gray(`(${(elapsed / 1000).toFixed(2)}s)`);
 
+  // eslint-disable-next-line no-console
   console.log(`${BADGE_SUCCESS} ${Ansi.green(name)} ${elapsedString}\n`);
 };
 
@@ -51,6 +50,7 @@ export const test = (name, run) => {
 
       return returnee;
     } catch (error) {
+      // eslint-disable-next-line no-console
       console.log(`${BADGE_FAIL} ${Ansi.red(name)}\n`);
       throw error;
     }
