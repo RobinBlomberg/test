@@ -1,17 +1,17 @@
 {
   "name": "@robinblomberg/test",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "author": "Robin Blomberg",
   "type": "module",
   "main": "index.js",
   "types": "dist/index.d.ts",
   "dependencies": {
-    "@robinblomberg/ansi": "^0.4.1",
-    "@robinblomberg/assert": "^0.2.7",
-    "@robinblomberg/timer": "^0.1.0"
+    "@robinblomberg/ansi": "^0.4.2",
+    "@robinblomberg/assert": "^0.2.8",
+    "@robinblomberg/timer": "^0.1.1"
   },
   "devDependencies": {
-    "@robinblomberg/eslint-config-robinblomberg": "^0.2.15",
+    "@robinblomberg/eslint-config-robinblomberg": "^0.2.16",
     "concurrently": "^5.3.0",
     "cross-env": "^7.0.3",
     "eslint": "^7.14.0",
@@ -20,13 +20,15 @@
   },
   "scripts": {
     "compile": "rimraf dist && tsc",
+    "dev": "nodemon --watch . --exec \"concurrently \\\"node ./index.test.js\\\" tsc\"",
     "lint": "eslint \"**/*.{js,ts}\"",
     "lint:fix": "eslint \"**/*.{js,ts}\" --fix",
-    "pre-commit": "concurrently --kill-others-on-fail \"npm run test\" eslint"
+    "pre-commit": "concurrently --kill-others-on-fail \"npm run test\" eslint",
+    "test": "node ./index.test.js"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run compile && lint-staged"
+      "pre-commit": "npm run compile && npm run test && lint-staged"
     }
   },
   "lint-staged": {
