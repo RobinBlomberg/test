@@ -35,18 +35,16 @@ export const it = describe;
  * @return {() => void | Promise<void>}
  */
 export const test = (name, run) => {
-  return () => {
+  return async() => {
     try {
       const timer = new Timer();
       const returnee = run();
 
       if (returnee instanceof Promise) {
-        returnee.then(() => {
-          _logSuccess(name, timer);
-        });
-      } else {
-        _logSuccess(name, timer);
+        await returnee;
       }
+
+      _logSuccess(name, timer);
 
       return returnee;
     } catch (error) {
