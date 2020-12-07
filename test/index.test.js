@@ -1,4 +1,4 @@
-import { describe, doesNotThrow, equal, notEqual, test, throws } from './index.js';
+import { describe, doesNotThrow, equal, notEqual, test, throws } from '../lib/index.js';
 
 test('@robinblomberg/test', () => {
   describe('doesNotThrow', () => {
